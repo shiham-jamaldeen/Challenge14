@@ -1,0 +1,12 @@
+[{
+    "comment": "I just learned about this in my class!",
+    "user_id": "2",
+    "post_id":"1"
+},
+{
+
+    "comment": "I have really loved learning about ORMS. It's really simplified the way I create queries!",
+    "user_id": "2",
+    "post_id": "3"
+}
+]

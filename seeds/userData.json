@@ -1,0 +1,13 @@
+[
+    {
+        "name": "TestUserA",
+        "email": "testUseA@someEmail.com.au",
+        "password": "Password123"
+    },
+    {
+        "name": "TestUserB",
+        "email": "testUserB@someEmail.com.au",
+        "password": "Password123"
+
+    }
+]
