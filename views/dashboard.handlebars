@@ -1,0 +1,35 @@
+<div class="container">
+        <div class="row" style="padding-top: 25px">
+    {{#each getAllPostsForUser as |blogPost|}}        
+          <div
+            class="col-md-8"
+            style="
+              background-color: burlywood;
+              border: 2px;
+              border-style: dashed;
+              border-radius: 5px;
+              padding: 10px;
+            "
+          >
+            <h4><a href="/{{{blogPost.post_id}}}">{{{blogPost.post_title}}}</a></h4>
+        </div>
+        <div
+            class="col-md-4"
+            style="
+              background-color: burlywood;
+              border: 2px;
+              border-style: dashed;
+              border-radius: 5px;
+              padding: 10px;
+              text-align: right;
+            "
+          >
+            <h6>{{{blogPost.date_created}}}</h6>
+          </div>
+          <div><span>&nbsp;</span></div>
+         {{/each}} 
+        </div>
+        <div class="col-lg-12" style="padding: 10px; color:bisque">
+              <button type="button" class="btn btn-secondary btn-lg" id="new-post-button">New Post</button>
+        </div>
+      </div>

@@ -1,0 +1,24 @@
+<div class="container-fluid" style="padding:35px;">
+{{#each allBlogPosts as |allBlogPost| }}
+<div class="row" style="padding-top: 25px">
+          <div
+            class="col-8"
+            style="border: 5px solid burlywood; background-color: burlywood">
+            <h5>{{{allBlogPost.post_title}}}</h5>
+          </div>
+          <div
+            class="col-4"
+            style="
+              border: 5px solid burlywood;
+              background-color: burlywood;
+              text-align: right;
+            "
+          >
+            <h5>{{{allBlogPost.user.name}}}<span>&nbsp; &nbsp;</span>{{{allBlogPost.date_created}}}</h5>
+          </div>
+          <div style="border: 5px solid burlywood; padding: 10px">
+            <h5>{{{allBlogPost.post_content}}}</h5>
+          </div>
+        </div>        
+{{/each}}
+</div>

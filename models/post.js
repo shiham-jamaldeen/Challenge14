@@ -11,9 +11,9 @@ Post.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    post_title: { type: DataTypes.STRING, allowNull: false },
+    post_title: { type: DataTypes.TEXT, allowNull: false },
 
-    post_content: { type: DataTypes.STRING, allowNull: false },
+    post_content: { type: DataTypes.TEXT, allowNull: false },
 
     date_created: {
       type: DataTypes.DATEONLY,
