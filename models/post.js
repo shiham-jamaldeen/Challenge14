@@ -6,7 +6,7 @@ class Post extends Model {}
 Post.init(
   //db fields post_id, title, content, date_created and user_id(FK)
   {
-    post_id: {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,

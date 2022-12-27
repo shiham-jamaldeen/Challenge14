@@ -15,11 +15,6 @@ const loginFormHandler = async (event) => {
     // If successful, redirect the browser to the dashboard
     document.location.replace("/dashboard");
   }
-  // } else {
-  //   window.alert(
-  //     "Sorry your login details are incorrect!" + "\n" + "Please try again"
-  //   );
-  // }
 };
 document
   .querySelector("#login-button")

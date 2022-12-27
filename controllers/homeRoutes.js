@@ -32,7 +32,7 @@ router.get("/login", (req, res) => {
   }
 });
 //route for "/dashboard" , when the user has logged in
-//display only those created by the user
+//display posts only those created by the user
 router.get("/dashboard", withAuth, async (req, res) => {
   try {
     const getUserData = await User.findByPk(req.session.user_id);
@@ -42,11 +42,11 @@ router.get("/dashboard", withAuth, async (req, res) => {
     });
     //serialise data
     const getUser = getUserData.get({ plain: true });
-    console.log(getUser);
+    //console.log(getUser);
     const getAllPostsForUser = getPostData.map((blogPost) =>
       blogPost.get({ plain: true })
     );
-    console.log(getAllPostsForUser);
+    //console.log(getAllPostsForUser);
     res.render("dashboard", {
       getAllPostsForUser,
       getUser,
@@ -59,16 +59,25 @@ router.get("/dashboard", withAuth, async (req, res) => {
 
 //route for "/dashboard/id:, when the user has logged in
 //display only for those created by the user
-//TO DO**
-router.get("/post/:id", withAuth, (req, res) => {
+router.get("/post/:id", withAuth, async (req, res) => {
   try {
-    const getIndividualPostData = Post.findByPk(req.params.id);
+    const getIndividualPostData = await Post.findByPk(req.params.id);
 
-    const getIndividualPost = getIndividualPostData.get({ plain: true });
+    const individualBlogPost = getIndividualPostData.get({ plain: true });
 
-    const getBlogPostCommetData = Comment.findAll({ where: { post_id } });
+    const getCommentForBlogPostData = await Comment.findAll({
+      where: { post_id: req.params.id },
+    });
 
-    res.render("dashboard", { getIndividualPost });
+    const commentForBlogPosts = getCommentForBlogPostData.map((comment) =>
+      comment.get({ plain: true })
+    );
+
+    res.render("blogpost", {
+      individualBlogPost,
+      commentForBlogPosts,
+      logged_in: req.session.logged_in,
+    });
   } catch (error) {
     res.status(500).json(error);
   }

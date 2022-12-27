@@ -1,0 +1,72 @@
+  <div class="container">
+        <div class="row" style="padding-top: 25px">
+          <div
+            class="col-md-8"
+            style="
+              background-color: burlywood;
+              border: 2px;
+              border-style: dashed;
+              border-radius: 5px;
+              padding: 10px;
+              text-align:left;
+            "
+          >
+            <h4>{{{individualBlogPost.post_title}}}</h4>
+          </div>
+          <div
+            class="col-md-4"
+            style="
+              background-color: burlywood;
+              border: 2px;
+              border-style: dashed;
+              border-radius: 5px;
+              padding: 10px;
+              text-align: right;
+            "
+          >
+            <h6>{{{individualBlogPost.user_id}}}<span>&nbsp;</span>{{{individualBlogPost.date_created}}}</h6>
+          </div>
+          <div
+            style="
+              background-color: burlywood;
+              border: 2px;
+              border-style: dashed;
+              border-radius: 5px;
+              padding: 10px;
+            "
+          >
+            <h6>{{{individualBlogPost.post_content}}}</h6>
+          </div>
+          <div><span>&nbsp;</span></div>
+          <div
+            style="
+              background-color: burlywood;
+              border: 2px;
+              border-style: dashed;
+              border-radius: 5px;
+              padding: 10px;
+            ">
+            <h5>Comments</h5>
+          {{#each commentForBlogPosts as |comment|}}
+            <p>{{{comment.comment}}} <span>&nbsp;</span>{{{comment.date_created}}}</p>
+            {{/each}}
+          </div>
+          <div><span>&nbsp;</span></div>
+          <div
+            style="
+              background-color: burlywood;
+              border: 2px;
+              border-style: dashed;
+              border-radius: 5px;
+              padding: 10px;
+            ">
+            <h5>New Comment</h5>
+             <div class="form-group">
+             <textarea class="form-control" id="newCommentTextArea" rows="3"></textarea>
+             <span>&nbsp;</span>
+             <button type="button" class="btn btn-secondary btn-lg" id="new-comment-button">Submit</button>
+            </div>
+          </div>
+         
+        </div>
+      </div>
