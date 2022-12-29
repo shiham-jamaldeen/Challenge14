@@ -58,3 +58,11 @@ login-container {
   text-decoration: none;
   font-size: 100%;
 }
+.no-button-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  text-decoration: none;
+  font-size: 100%;
+}
