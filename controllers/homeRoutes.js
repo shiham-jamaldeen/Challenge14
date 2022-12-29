@@ -2,7 +2,7 @@ const router = require("express").Router();
 const withAuth = require("../utils/auth.js");
 const { User, Post, Comment } = require("../models");
 
-//route for "/", this for displaying posts and comments from
+//route for "/", this for displaying posts from
 //the dashboard when the user is not logged in
 router.get("/", async (req, res) => {
   try {
@@ -19,6 +19,25 @@ router.get("/", async (req, res) => {
     res.status(500).json(error);
   }
 });
+//route for "/post/:id" for displaying comments
+//for the selected blog post AND the user has NOT signed in
+router.get("/post/:id", async (req, res) => {
+  const getIndividualPostData = await Post.findByPk(req.params.id, {
+    include: { model: User },
+  });
+
+  const getIndividualPosts = getIndividualPostData.get({ plain: true });
+
+  const getAllCommentsData = await Comment.findAll({
+    where: { post_id: req.params.id },
+    include: { model: User },
+  });
+  const getAllComments = getAllCommentsData.map((comments) =>
+    comments.get({ plain: true })
+  );
+  res.render("homepageSinglePost", { getIndividualPosts, getAllComments });
+});
+
 //route for "/login"
 router.get("/login", (req, res) => {
   try {
@@ -53,7 +72,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
 
 //route for "/dashboard/id:, when the user has logged in
 //display only for those created by the user
-router.get("/post/:id", withAuth, async (req, res) => {
+router.get("/dashboard/:id", withAuth, async (req, res) => {
   try {
     const getIndividualPostData = await Post.findByPk(req.params.id);
 

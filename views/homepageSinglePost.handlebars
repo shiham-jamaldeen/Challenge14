@@ -1,0 +1,61 @@
+ <div class="container">
+        <div class="row" style="padding-top: 25px">
+          <div
+            class="col-md-8"
+            style="
+              background-color: burlywood;
+              border: 2px;
+              border-style: dashed;
+              border-radius: 5px;
+              padding: 10px;
+              text-align:left;
+            "
+          >
+            <h4>{{{getIndividualPosts.post_title}}}</h4>
+          </div>
+          <div
+            class="col-md-4"
+            style="
+              background-color: burlywood;
+              border: 2px;
+              border-style: dashed;
+              border-radius: 5px;
+              padding: 10px;
+              text-align: right;
+            "
+          >
+            <h6><span style="font-style: italic;">Date created: {{{getIndividualPosts.date_created}}}</span><span>&nbsp;</span><span style="font-style: italic;">Author: {{{getIndividualPosts.user.name}}} </span></h6>
+          </div>
+          <div
+            style="
+              background-color: burlywood;
+              border: 2px;
+              border-style: dashed;
+              border-radius: 5px;
+              padding: 10px;
+            "
+          >
+            <h6>{{{getIndividualPosts.post_content}}}</h6>
+          </div>
+          <div><span>&nbsp;</span></div>
+          <div
+            style="
+              background-color: burlywood;
+              border: 2px;
+              border-style: dashed;
+              border-radius: 5px;
+              padding: 10px;
+            ">
+            <h5>Comments</h5>
+          {{#if getAllComments}}  
+          {{#each getAllComments as |comment|}}
+            <p style="background-color:antiquewhite; padding:10px">{{{comment.comment}}} <span>&nbsp;</span><span style="font-style:italic">{{{comment.date_created}}}</span><span>&nbsp;</span> <span style="font-style:italic">{{{comment.user.name}}}</span></p>
+          {{/each}}
+          {{else}}
+          <p  style="background-color:antiquewhite; padding:10px; font-style:italic">Sorry no Comments for this blogpost</p>
+          {{/if}}
+          </div>
+          <div><span>&nbsp;</span></div>
+        </div>
+      </div>
+ 
