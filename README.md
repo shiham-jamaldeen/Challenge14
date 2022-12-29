@@ -4,7 +4,7 @@
 
 The Technology Blog is a simple blogging platform that allows users to post technology related blogposts. As a added bonus registered users can post their comments and ideas against an article.
 
-Deployed URL: [The Technology Blog] (https://fast-anchorage-91606.herokuapp.com/)
+Deployed URL: [The Technology Blog](https://fast-anchorage-91606.herokuapp.com/)
 
 ## Key features
 
