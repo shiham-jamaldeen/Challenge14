@@ -35,21 +35,15 @@ router.get("/login", (req, res) => {
 //display posts only those created by the user
 router.get("/dashboard", withAuth, async (req, res) => {
   try {
-    const getUserData = await User.findByPk(req.session.user_id);
-
     const getPostData = await Post.findAll({
       where: { user_id: req.session.user_id },
     });
     //serialise data
-    const getUser = getUserData.get({ plain: true });
-    //console.log(getUser);
     const getAllPostsForUser = getPostData.map((blogPost) =>
       blogPost.get({ plain: true })
     );
-    //console.log(getAllPostsForUser);
     res.render("dashboard", {
       getAllPostsForUser,
-      getUser,
       logged_in: req.session.logged_in,
     });
   } catch (error) {
@@ -67,6 +61,7 @@ router.get("/post/:id", withAuth, async (req, res) => {
 
     const getCommentForBlogPostData = await Comment.findAll({
       where: { post_id: req.params.id },
+      include: { model: User },
     });
 
     const commentForBlogPosts = getCommentForBlogPostData.map((comment) =>

@@ -1,12 +1,18 @@
 [
     {
-        "name": "TestUserA",
-        "email": "testUseA@someEmail.com.au",
+        "name": "JimBeam",
+        "email": "jimbeam@someEmail.com.au",
         "password": "Password123"
     },
     {
-        "name": "TestUserB",
-        "email": "testUserB@someEmail.com.au",
+        "name": "Ruffalo",
+        "email": "ruffaloB@someEmail.com.au",
+        "password": "Password123"
+
+    },
+    {
+        "name": "MaryJane",
+        "email": "maryjane@someEmail.com.au",
         "password": "Password123"
 
     }

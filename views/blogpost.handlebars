@@ -37,7 +37,7 @@
               text-align: right;
             "
           >
-          <i class='fas fa-edit' style='font-size:24px;color:red' data-target="#editModal" data-toggle="modal"></i>
+          <i class='fas fa-edit no-button-icon' style='font-size:24px;color:red' data-target="#editModal" data-toggle="modal"></i>
           <span>&nbsp;</span>
          <i class='fas fa-trash-alt no-button-icon' style='font-size:24px;color:red' id="deleteIcon"></i>
           </div>
@@ -63,7 +63,7 @@
             ">
             <h5>Comments</h5>
           {{#each commentForBlogPosts as |comment|}}
-            <p>{{{comment.comment}}} <span>&nbsp;</span>{{{comment.date_created}}}</p>
+            <p style="background-color:antiquewhite; padding:10px">{{{comment.comment}}} <span>&nbsp;</span><span style="font-style:italic">{{{comment.date_created}}}</span><span>&nbsp;</span> <span style="font-style:italic">{{{comment.user.name}}}</span></p>
             {{/each}}
           </div>
           <div><span>&nbsp;</span></div>

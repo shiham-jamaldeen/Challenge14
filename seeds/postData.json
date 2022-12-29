@@ -12,5 +12,13 @@
     "post_title":"ORM",
     "post_content": "This teaches the Object Relational Model, using the MySQL database.",
     "user_id":"2"
+},
+{   "post_title":"Node.js",
+    "post_content": "Node.js is an open-source server environment. Node.js is cross-platform and runs on Windows, Linux, Unix, and macOS. Node.js is a back-end JavaScript runtime environment. Node.js runs on the V8 JavaScript Engine and executes JavaScript code outside a web browser.",
+    "user_id":"1"
+},
+{   "post_title":"SQL",
+    "post_content": "SQL stands for Structured Query Language.",
+    "user_id":"3"
 }
 ]

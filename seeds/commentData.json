@@ -1,12 +1,23 @@
 [{
     "comment": "I just learned about this in my class!",
+    "user_id": "1",
+    "post_id":"1"
+},
+{   "comment": "Thank you, the Technnology Blog Post, I have learnt something new!",
     "user_id": "2",
     "post_id":"1"
+
 },
 {
 
     "comment": "I have really loved learning about ORMS. It's really simplified the way I create queries!",
     "user_id": "2",
+    "post_id": "3"
+},
+{
+
+    "comment": "This technology is new to me! I am still learning",
+    "user_id": "1",
     "post_id": "3"
 }
 ]
