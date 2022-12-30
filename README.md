@@ -1,10 +1,15 @@
 # The Technology Blog ![MIT License](https://camo.githubusercontent.com/302a0a2a90397c2fc68f3838a6c9b9cebec684d041d250065a05bebab1412cd7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d726564)
 
-## Description
-
 The Technology Blog is a simple blogging platform that allows users to post technology related blogposts. As a added bonus registered users can post their comments and ideas against an article.
 
 Deployed URL: [The Technology Blog](https://fast-anchorage-91606.herokuapp.com/)
+
+## Table of Contents
+
+- [Key features](#key-features)
+- [Technology stack](#technology-stack)
+- [Installation](#installation)
+- [Usage instructions](#usage-instructions)
 
 ## Key features
 
@@ -22,7 +27,8 @@ Deployed URL: [The Technology Blog](https://fast-anchorage-91606.herokuapp.com/)
 - `node.js`
 - `Sequelize`
 - `MySQL2`
-- Several other `npm` packages, see `package.json` for details.
+- Several other `npm` packages, see `package.json` for details
+- heroku, for hosting and deployment.
 
 ## Installation
 
@@ -41,20 +47,30 @@ Deployed URL: [The Technology Blog](https://fast-anchorage-91606.herokuapp.com/)
 
 ### Screenshot
 
+![Alt text](images/homepage.png)
+
 ### View comments for a blog post (_anonymously_)
+
 1. Go to: https://fast-anchorage-91606.herokuapp.com/
 2. Select a blog post link.
 
 ### Screenshot
 
+![Alt text](images/blogPostComment.png)
+
 ### Login to Dashboard
+
 1. Go to: https://fast-anchorage-91606.herokuapp.com/dashboard
 2. Select Dashboard.
 
 ### Screenshot
 
+![Alt text](images/login.png)
+
+![Alt text](images/dashboard.png)
 
 ### Add a new comment, to your blogpost
+
 1. Go to: https://fast-anchorage-91606.herokuapp.com/dashboard
 2. Select Dashboard.
 3. Select the blog post link.
@@ -62,7 +78,10 @@ Deployed URL: [The Technology Blog](https://fast-anchorage-91606.herokuapp.com/)
 
 ### Screenshot
 
+![Alt text](images/newComment.png)
+
 ### Add new blogpost
+
 1. Go to: https://fast-anchorage-91606.herokuapp.com/dashboard
 2. Select Dashboar
 3. Select New Post button
@@ -71,8 +90,10 @@ Deployed URL: [The Technology Blog](https://fast-anchorage-91606.herokuapp.com/)
 
 ### Screenshot
 
+![Alt text](images/newBlogPost.png)
 
 ### Edit or Delete a blogpost
+
 1. Go to: https://fast-anchorage-91606.herokuapp.com/dashboard
 2. Select Dashboard
 3. Select the required blog post link
@@ -81,9 +102,10 @@ Deployed URL: [The Technology Blog](https://fast-anchorage-91606.herokuapp.com/)
 
 ### Screenshot
 
+#### Edit Blogpost
 
+![Alt text](images/editBlogPost.png)
 
+#### Delete Blogpost
 
-
-
-
+![Alt text](images/deleteBlogPost.png)
