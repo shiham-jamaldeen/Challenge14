@@ -8,6 +8,7 @@ Deployed URL: [The Technology Blog](https://fast-anchorage-91606.herokuapp.com/)
 
 ## Key features
 
+- View existing blogposts and comments
 - New users sign up (_Comming Soon_)
 - Dashboard that allows users to:
   - View existing blogposts and comments for an article
@@ -33,11 +34,56 @@ Deployed URL: [The Technology Blog](https://fast-anchorage-91606.herokuapp.com/)
 
 ## Usage Instructions
 
-### Login and view your blog posts
+### View All blog posts (_anonymously_)
 
-1. Go to:
-2.
+1. Go to: https://fast-anchorage-91606.herokuapp.com/
+2. Select Home.
 
 ### Screenshot
 
-###
+### View comments for a blog post (_anonymously_)
+1. Go to: https://fast-anchorage-91606.herokuapp.com/
+2. Select a blog post link.
+
+### Screenshot
+
+### Login to Dashboard
+1. Go to: https://fast-anchorage-91606.herokuapp.com/dashboard
+2. Select Dashboard.
+
+### Screenshot
+
+
+### Add a new comment, to your blogpost
+1. Go to: https://fast-anchorage-91606.herokuapp.com/dashboard
+2. Select Dashboard.
+3. Select the blog post link.
+4. Enter your comment and press Submit.
+
+### Screenshot
+
+### Add new blogpost
+1. Go to: https://fast-anchorage-91606.herokuapp.com/dashboard
+2. Select Dashboar
+3. Select New Post button
+4. Enter the Title and Content in the pop-up window.
+5. Select Save.
+
+### Screenshot
+
+
+### Edit or Delete a blogpost
+1. Go to: https://fast-anchorage-91606.herokuapp.com/dashboard
+2. Select Dashboard
+3. Select the required blog post link
+4. To edit, select the Edit icon.
+5. To delete, select the Delete icon.
+
+### Screenshot
+
+
+
+
+
+
+
